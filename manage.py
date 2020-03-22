@@ -4,7 +4,7 @@ import time
 
 print("Running the manage file!")
 
-x=120
+x=12
 while x>0:
     print("This is build is taking a long time! ({} seconds left)".format(x))
     x -= 1

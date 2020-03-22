@@ -14,7 +14,7 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          command: ./manage.py test
+          command: ./manage.py
           name: Test
       - run:
           command: echo 'writing to file' > my_workspace/file.txt
@@ -24,14 +24,16 @@ jobs:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
-      - run: echo "A first hello"
+      - run: echo "hello from job2"
 
 workflows:
-  main-workflow:
+  workflow-z:
     jobs:
       - build-and-test
       - job2:
           requires:
             - build-and-test
-
+  workflow-w:
+    jobs:
+      - job2:
 
