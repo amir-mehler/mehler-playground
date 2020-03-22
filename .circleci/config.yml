@@ -14,9 +14,16 @@ jobs:
       - run:
           command: ./manage.py test
           name: Test
+  job2:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - checkout
+      - run: echo "A first hello"
 
 workflows:
-  main:
+  main-workflow:
     jobs:
       - build-and-test
+      - job2
 
