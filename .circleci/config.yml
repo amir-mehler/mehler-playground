@@ -35,5 +35,5 @@ workflows:
             - build-and-test
   workflow-w:
     jobs:
-      - job2:
+      - job2
 
