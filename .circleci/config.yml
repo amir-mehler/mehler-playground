@@ -30,5 +30,8 @@ workflows:
   main-workflow:
     jobs:
       - build-and-test
-      - job2
+      - job2:
+          requires:
+            - build-and-test
+
 
