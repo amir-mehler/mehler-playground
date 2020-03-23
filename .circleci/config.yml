@@ -33,6 +33,7 @@ jobs:
 
 
 workflows:
+  version: 2
   workflow-z:
     jobs:
       - build-and-test
