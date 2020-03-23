@@ -43,14 +43,14 @@ workflows:
   workflow-w:
     jobs:
       - job2
-  lets-party:
-    jobs:
-      - deploy-party-job
-    triggers:
-      - schedule:
-          cron: "0,5,10,15,20,25,30,35,40,45,50,55 * * * *"
-          filters:
-            branches:
-              only:
-                - master
+# lets-party:
+#   jobs:
+#     - deploy-party-job
+#   triggers:
+#     - schedule:
+#         cron: "0,5,10,15,20,25,30,35,40,45,50,55 * * * *"
+#         filters:
+#           branches:
+#             only:
+#               - master
 
