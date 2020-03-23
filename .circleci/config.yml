@@ -24,7 +24,7 @@ jobs:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
-      - run: echo "hello from job2"
+      - run: echo "hello from job 2"
   deploy-party-job:
     docker:
       - image: circleci/ruby:2.4.1
