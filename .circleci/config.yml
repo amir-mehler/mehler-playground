@@ -44,7 +44,7 @@ workflows:
       - job2
   lets-party:
     jobs:
-      - job3
+      - deploy-party-job
     triggers:
       - schedule:
           cron: "0,15,30,45 * * * *"
